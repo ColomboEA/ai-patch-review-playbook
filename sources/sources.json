@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-11-21",
+  "sources": [
+    {
+      "title": "Semantic diff",
+      "url": "https://github.com/Wilfred/difftastic",
+      "type": "upstream_repository",
+      "supports": "Syntax-aware structural differences.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Syntax-aware structural differences.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Multi-language static analysis",
+      "url": "https://github.com/semgrep/semgrep",
+      "type": "upstream_repository",
+      "supports": "Pattern and dataflow findings using rules.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Pattern and dataflow findings using rules.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Code query analysis",
+      "url": "https://github.com/github/codeql",
+      "type": "upstream_repository",
+      "supports": "Database-backed queries for supported languages.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Database-backed queries for supported languages.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Secret scanning",
+      "url": "https://github.com/gitleaks/gitleaks",
+      "type": "upstream_repository",
+      "supports": "Credential-like material in Git content.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Credential-like material in Git content.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Filesystem/container scan",
+      "url": "https://github.com/aquasecurity/trivy",
+      "type": "upstream_repository",
+      "supports": "Vulnerabilities, misconfigurations, secrets, and SBOM-related targets.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Vulnerabilities, misconfigurations, secrets, and SBOM-related targets.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Dependency vulnerability scan",
+      "url": "https://github.com/google/osv-scanner",
+      "type": "upstream_repository",
+      "supports": "Known vulnerabilities using OSV data and supported manifests/SBOMs.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Known vulnerabilities using OSV data and supported manifests/SBOMs.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Policy automation",
+      "url": "https://github.com/reviewdog/reviewdog",
+      "type": "upstream_repository",
+      "supports": "Turns linter output into review annotations across CI systems.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Turns linter output into review annotations across CI systems.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Supply-chain posture",
+      "url": "https://github.com/ossf/scorecard",
+      "type": "upstream_repository",
+      "supports": "Repository security-practice checks.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Repository security-practice checks.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    }
+  ]
+}

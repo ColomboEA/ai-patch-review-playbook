@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "profile": 7,
+  "repository": "ai-patch-review-playbook",
+  "reviewed_on": "2026-11-21",
+  "comparison_axes": [
+    "Evidence layer",
+    "Tool",
+    "Finds",
+    "Best use",
+    "Still human"
+  ],
+  "entries": [
+    {
+      "name": "Semantic diff",
+      "role_or_focus": "Difftastic",
+      "url": "https://github.com/Wilfred/difftastic",
+      "supported_claim": "Syntax-aware structural differences.",
+      "best_use": "Reduce noise in supported-language diffs.",
+      "important_boundary": "Whether the new behavior is correct or authorized.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Multi-language static analysis",
+      "role_or_focus": "Semgrep",
+      "url": "https://github.com/semgrep/semgrep",
+      "supported_claim": "Pattern and dataflow findings using rules.",
+      "best_use": "Apply project or community security/correctness rules.",
+      "important_boundary": "Business invariants and unmodeled flows.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Code query analysis",
+      "role_or_focus": "CodeQL",
+      "url": "https://github.com/github/codeql",
+      "supported_claim": "Database-backed queries for supported languages.",
+      "best_use": "Deep security analysis where a CodeQL database and query packs exist.",
+      "important_boundary": "Coverage outside supported languages/queries.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Secret scanning",
+      "role_or_focus": "Gitleaks",
+      "url": "https://github.com/gitleaks/gitleaks",
+      "supported_claim": "Credential-like material in Git content.",
+      "best_use": "Gate commits and scan patch history.",
+      "important_boundary": "Whether a non-matching value is sensitive in context.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Filesystem/container scan",
+      "role_or_focus": "Trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "supported_claim": "Vulnerabilities, misconfigurations, secrets, and SBOM-related targets.",
+      "best_use": "Review container, IaC, filesystem, and dependency changes.",
+      "important_boundary": "Application behavior and exploitability decisions.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Dependency vulnerability scan",
+      "role_or_focus": "OSV-Scanner",
+      "url": "https://github.com/google/osv-scanner",
+      "supported_claim": "Known vulnerabilities using OSV data and supported manifests/SBOMs.",
+      "best_use": "Check dependency and lockfile changes.",
+      "important_boundary": "Compatibility, malicious packages, or unreported flaws.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Policy automation",
+      "role_or_focus": "reviewdog",
+      "url": "https://github.com/reviewdog/reviewdog",
+      "supported_claim": "Turns linter output into review annotations across CI systems.",
+      "best_use": "Make multiple checker results reviewable in the diff.",
+      "important_boundary": "Validity of the underlying linter rule.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Supply-chain posture",
+      "role_or_focus": "OpenSSF Scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "supported_claim": "Repository security-practice checks.",
+      "best_use": "Assess a newly introduced upstream dependency.",
+      "important_boundary": "That a specific release or artifact is safe.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    }
+  ],
+  "field_provenance": {
+    "supported_claim": "source-backed at the cited URL, subject to the recorded review date/version",
+    "best_use": "author recommendation; requires local validation",
+    "important_boundary": "author analysis unless the linked source explicitly states it"
+  }
+}
