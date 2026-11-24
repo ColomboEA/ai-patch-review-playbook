@@ -1,5 +1,10 @@
 # AI-Generated Patch Review Playbook
 
+
+> **Decision:** Use this playbook when an AI-generated patch needs risk-based review, isolated tests, evidence, and rollback; skip it for autonomous approval or as a replacement for reading the diff.
+>
+> **For:** maintainers reviewing agent patches, security reviewers, and CI owners  ·  **Not for:** teams that want the proposing agent to approve its own change
+
 An agent’s explanation is untrusted review input. Review the diff, its effects, and the evidence needed to roll it back.
 
 ## Before running the patch
@@ -62,6 +67,14 @@ Update a tool role only from its specific upstream docs/version. Update the play
 
 Source ledger: [`sources/sources.json`](sources/sources.json). Review artifact: [`assets/review-card.md`](assets/review-card.md).
 
+## Adjacent guides
+
+- [coding-agent-eval-starter](https://github.com/Dallashubgit/coding-agent-eval-starter) — Use it earlier when deciding which coding agent to pilot across distinct task lanes.
+- [dependency-agent-safety-gates](https://github.com/WILLIAMSTONSA/dependency-agent-safety-gates) — Use it when the patch includes a dependency update and needs package-specific gates.
+- [open-source-ai-code-provenance](https://github.com/ankr989/open-source-ai-code-provenance) — Use it when the reviewed patch also needs a bounded record of AI assistance and artifact identity.
+
 ## License
 
 Original playbook and review card are available under CC BY 4.0. Linked tools retain their own licenses.
+
+If this saved you a decision, star the repo — it is how the next reader finds it.
